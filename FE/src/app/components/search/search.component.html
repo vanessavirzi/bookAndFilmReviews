@@ -1,0 +1,29 @@
+<div class="row mt">
+  <div class="col-8 offset-2" *ngIf="elements">
+    <table datatable class="row-border hover">
+      <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Commento</th>
+        <th>Tipo</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let element of elements">
+        <td>{{element.name}}</td>
+        <td>{{element.comment}}</td>
+        <td>{{typeEnum.Book == element.type ? 'Libro' : element.type}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 text-center mt">
+    <i class="fa fa-plus-circle fa-5x mr-1"
+       aria-hidden="true"
+       placement="top"
+       ngbTooltip="Aggiungi un libro o film" (click)="openInsertModal()"> </i>
+  </div>
+</div>

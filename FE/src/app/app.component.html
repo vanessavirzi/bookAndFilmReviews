@@ -1,0 +1,30 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/icona.png" width="45" height="35" class="d-inline-block align-top" alt="">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/search">Search</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/credits">Credits</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--Selector for component-->
+<div id="body-element">
+  <router-outlet></router-outlet>
+</div>
+
+
+<!--Footer-->
+<footer>
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <a routerLink="/credits"> Vanessa Virzì - 00A000265</a>
+</div>
+</footer>
+

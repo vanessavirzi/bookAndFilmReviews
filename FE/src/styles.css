@@ -1,0 +1,32 @@
+/*I separate the route html file in 3 parts (for 100 vh and 100 vw of size)*/
+/*-navbar*/
+/*-body-element*/
+/*-footer*/
+.navbar {
+  height: 5vh;
+  width: 100vw;
+}
+
+#body-element {
+  display: block;
+  overflow-y: auto;
+  height: 87vh;
+  width: 100vw;
+}
+
+footer {
+  height: 5vh;
+  width: 100vw;
+}
+
+.navbar, .footer-copyright{
+  background-color: #98e8b161;
+}
+
+.row {
+  margin: 0;
+}
+
+i {
+  cursor: pointer;
+}

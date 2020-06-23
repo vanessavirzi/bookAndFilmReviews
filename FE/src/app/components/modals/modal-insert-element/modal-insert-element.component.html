@@ -1,0 +1,61 @@
+<div class="modal-header">
+  <h4 class="modal-title">Inserisci Elemento</h4>
+  <button type="button" class="close" aria-label="Close" *ngIf="!isSave" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form (ngSubmit)="saveNewElement()" #insertForm="ngForm">
+  <div class="modal-body">
+    <div class="form-group">
+
+      <label for="name">Name<strong class="text-danger">*</strong></label>
+      <input type="text" class="form-control" id="name"
+             required
+             placeholder="Inserisci il nome dell'elemento"
+             [(ngModel)]="newElement.name"
+             name="name"
+             #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+           class="alert alert-danger">
+        Name is required
+      </div>
+
+      <label class="mt-1" for="type">Tipo<strong class="text-danger">*</strong></label>
+      <select class="form-control"
+              id="type"
+              required
+              [(ngModel)]="newElement.type"
+              name="type"
+              #type="ngModel">
+        <option [value]="null" disabled>Seleziona il tipo di elemento</option>
+        <option [value]="typeEnum.Book">Libro</option>
+        <option [value]="typeEnum.Film">{{typeEnum.Film}}</option>
+      </select>
+      <div [hidden]="type.valid || type.pristine" class="alert alert-danger">
+        Tipo is required
+      </div>
+
+      <label class="mt-1" for="comment">Commento<strong class="text-danger">*</strong></label>
+      <textarea type="text" class="form-control"
+                id="comment"
+                required
+                placeholder="Inserisci il commento"
+                [(ngModel)]="newElement.comment"
+                name="comment"
+                #comment="ngModel">
+      </textarea>
+      <div [hidden]="comment.valid || comment.pristine"
+           class="alert alert-danger">
+        Comment is required
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button [ladda]="isSave"
+            type="submit" class="ladda-button"
+            data-color="green"
+            data-style="expand-right"
+            [disabled]="!insertForm.form.valid">Submit</button>
+  </div>
+</form>
