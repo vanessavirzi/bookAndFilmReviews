@@ -4,6 +4,7 @@ const element = require("./model/element");
 const type = require("./model/type");
 const router = express.Router();
 const app = express();
+//This is for manage cors problem for request
 var cors = require('cors');
 app.use(cors({
     origin: 'http://localhost:4200'
