@@ -22,12 +22,12 @@ With this step, you can try this webapp:
 For starting Front-End WebApp side:
 1) Go on the FE folder
 2) Digit on command line 'ng serve'
-2.1) By default the app run on localhost:4200
+3) By default the app run on localhost:4200
 
 For starting Front-End BE side:
 1) Go on the BE folder
 2) Digit on command line 'node server.js' (if you want apply some changes, i advice start all with command 'nodemon server' for have hot swap, if you don't have nodemon on your machine, it's simple easy to install thank npm)
-2.1) By default the app run on localhost:4000
+3) By default the app run on localhost:4000
 
 ## Authors
 
