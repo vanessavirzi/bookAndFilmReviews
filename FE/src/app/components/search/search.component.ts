@@ -39,5 +39,12 @@ export class SearchComponent implements OnInit {
     },()=>{}, ()=>{});
   }
 
+  deleteElement(el: ElementApp): void{
+    //call get element API
+    this.restService.deleteElement(el).subscribe( () => {
+      this.searchElement();
+    },()=>{}, ()=>{});
+  }
+
 
 }

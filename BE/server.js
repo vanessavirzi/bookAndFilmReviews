@@ -81,6 +81,19 @@ router.route("/element").get(function (req, res) {
 });
 
 /**
+ * Remove element from db
+ */
+router.route("/element").delete(function (req, res) {
+    element.remove(req.body, function (err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(result);
+        }
+    });
+});
+
+/**
  * Save a single or list of element
  */
 router.route("/element").post(function (req, res) {

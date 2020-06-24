@@ -19,6 +19,10 @@ export class RestService {
     return this.httpClient.get(this.ENDPOINT+'element');
   }
 
+  public deleteElement(element: ElementApp): Observable<any> {
+    return this.httpClient.delete(this.ENDPOINT+'element');
+  }
+
   public saveElement(element: ElementApp): Observable<any> {
     return this.httpClient.post(this.ENDPOINT+'element', element);
   }

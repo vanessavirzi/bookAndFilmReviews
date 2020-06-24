@@ -6,6 +6,7 @@
         <th>Nome</th>
         <th>Commento</th>
         <th>Tipo</th>
+        <th>Elimina</th>
       </tr>
       </thead>
       <tbody>
@@ -13,6 +14,7 @@
         <td>{{element.name}}</td>
         <td>{{element.comment}}</td>
         <td>{{typeEnum.Book == element.type ? 'Libro' : element.type}}</td>
+        <td><i class="fa fa fa-times text-danger" (click)="deleteElement(element)"> </i></td>
       </tr>
       </tbody>
     </table>
