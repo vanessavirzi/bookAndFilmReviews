@@ -1,7 +1,4 @@
-# Project Title
-
-Book And Film Reviews
-
+# Book And Film Reviews
 
 ### Prerequisites
 
