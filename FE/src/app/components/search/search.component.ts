@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
   }
 
   openInsertModal(): void {
-    //Open moda for insert new element
+    //Open modal for insert new element
     let modal = this.modalService.open(ModalInsertElementComponent, {backdrop: 'static'});
     modal.result.finally(function () {
       //At modal close even, recharge all element
